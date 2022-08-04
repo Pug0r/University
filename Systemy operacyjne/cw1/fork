@@ -1,0 +1,85 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+// Program wypisujacy identyfikatory dla procesu macierzystego oraz wszystkich jego procesow potomnych
+int main(){
+// Zmienna przechowujaca PID procesu macierzystego
+     int main_id = getpid();
+     int id;
+     int i;
+     int uid, gid, pid, ppid, pgid;
+     
+//  Trzykrotne wywolanie funkcji fork(), co w sumie da 8 procesow
+     for(i = 0; i < 3; i++){
+        switch(id = fork()){
+            case -1:
+                perror("Fork doesnt seem to work:("); // niesamowite poczucie humoru autora kodu
+                exit(1);
+            case 0:
+                uid = getuid();
+                gid = getgid();
+                pid = getpid();
+                ppid = getppid();
+                pgid = getpgrp();
+                printf("UID:  %d\nGID:  %d\nPID:  %d\nPPID: %d\nPGID: %d\n\n", uid, gid, pid, ppid, pgid);
+                break;
+            default:
+                wait(NULL);
+        }
+     }
+// Ten if ma ulatwic identyfikacje procesu glownego, choc dzieki zastosowaniu wait powinno byc jasne, ze bedzie to ten na samym dole
+     if (getpid() == main_id){
+          printf("Proces macierzysty\n");
+     }
+
+     return 0;
+}
+
+// int main(){
+//      int main_id = getpid();
+//      int id;
+
+//      for(int i = 0; i < 3; i++){
+//           id = fork();
+//           if (id != 0){
+//                wait(NULL);
+//                sleep(10);
+//           }
+//      }
+//      if (getpid() == main_id){
+//           printf("Proces glowny\n");
+//      }
+//      int uid = getuid();
+//      int gid = getgid();
+//      int pid = getpid();
+//      int ppid = getppid();
+//      int pgid = getpgrp();
+
+
+
+//      printf("UID: %d\nGID: %d\nPID: %d\nPPID: %d\nPGID: %d\n\n", uid, gid, pid, ppid, pgid);
+//      return 0;
+// }
+
+
+// int main(int argc, char* argv[]){
+//      int id = fork();
+//      int n; 
+//      if (id == 0){
+//           n = 1;
+//      } 
+//      else{
+//           n = 6;
+//      }
+
+//      int i;
+//      for(i = n; i < n + 5; i++){
+//           printf("%d ", i);
+//           fflush(stdout);
+//      }
+//      printf("\n");
+//      return 0; 
+// }

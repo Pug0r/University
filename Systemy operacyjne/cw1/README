@@ -1,0 +1,3 @@
+Plik zawiera 5 programow, kazdy na jedno zadanie z pliku cwiczeniowego. Nazwy programow odpowiadaja oznaczeniom polecen w pliku cwiczeniowym. Katalog zawiera rowniez drzewo genealogiczne, screenshot tego drzewa (w razie gdyby plik wygladal inaczej po otwarciu na innym komputerze) i podstawowy plik Makefile sluzacy do wywolania programow, czyszczenia zbednych plikow po wykonaniu i archiwizacji.
+
+Autorem wszystkich plikow w katalogu jest Aleksander Pugowski, pliki powstaly na przelomie 16-17 marca 2022, poznymi nocnymi godzinami.

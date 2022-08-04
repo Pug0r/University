@@ -1,0 +1,6 @@
+// Aleksander Pugowski 20.04.2022
+// Program jest realizacja cwiczenia 4. Implementuje problem Producent-Konsument za pomocą potoków nienazwanych
+// pomiędzy rodzicem a dzieckiem. Producent (dziecko) najpierw wczytuje informacje z pliku tekstowego do tablicy 
+// znakow (buffer) za pomoca funkcji read, a nastepnie puszcza wczytany tekst w potok (funkcja write).
+// Natomiast proces macierzysty najpierw wczytuje informacje z potoku do swojej kopii buffera, a nastepnie wpisuje 
+// ją w plik wyjsciowy. Na koncu zarowno plik wejsciowy jak i plik wyjsciowy sa identyczne.

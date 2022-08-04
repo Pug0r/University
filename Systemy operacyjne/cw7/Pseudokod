@@ -1,0 +1,59 @@
+Uogolnienie problemu synchronizacji korzystania z pamieci dzielonej przy pomocy semaforow dla wielu procesow (problem producent-konsument).
+We wspolnej pamieci umieszczony jest bufor cykliczny.
+Dla uproszczenia przyjmujemy, ze kolejnosc przesylania danych jest dowolna.
+Oznacza to, ze nie ma znaczneia ktory producent zacznie wysylanie i ktory bedzie kontynuowal, analogicznie dla konsumenta.
+===========================================================================================
+
+//Rozmiar bufora, nalezy go dobrac do potrzeb, rozpatrujemy jak dla jednego producenta
+#define N ?
+#define M N*ilosc_producentow
+// Rozmiar elementu bufora (bajty)
+#define NELE
+
+
+// Struktura bufora, w jezyku problemu
+// producent-konsument bedzie to po prostu containter na przesylany towar
+typdef struct {
+    Towar bufor[M][NELE];      // przechowywanie danych - wazne jest zapewnienie, ze konsumenci zdaza odebrac towar       
+    int wstaw, wyjmij;     // miejsce wstawiania i wyjmowania
+    int koniec;            // flaga informujaca o zakonczeniu dzialania przez producentow
+} Towar; 
+
+// Inicjacja w obu programach, odwzorowanej struktury
+Towar bufor[M];
+semaphore PROD = M;
+semaphore KONS = 0;
+int wstaw = 0;
+int wyjmij = 0;
+// Flaga ustawiona na -1 to znak ze konsumenci moga kontynuowac wczytywanie
+int koniec = -1;
+
+// Proces Producent
+//-------------------------
+Towar towarProd;
+// Gdy nastepuje ostatnie wczytanie tj. ilosc pobranych danych jest mniejsza niz oczekiwana to ustawia flage o koncu odczytu
+if data_input != NELE
+    koniec = -1
+while(1){
+    // Produkcja towaru
+    P(PROD)     // Opuszczanie semafora producenta 
+    bufor[wstaw] = towarProd
+    wstaw = (wstaw +1) % M;
+    V(KONS)
+}
+
+// Proces Konsument
+// --------------------
+Towar towarKons;
+while(koniec == -1){
+    P(KONS)
+    towarKons = bufor[wyjmij]
+    wyjmij = (wyjmij + 1) % M
+    V(PROD)
+}
+// wczytac z ostatniego segmentu taka ilosc danych jaka jest w fladze koniec od konsumenta
+read(output, bufor[wyjmij], koniec)
+
+1. napisz README
+2. Napisz komenatrze od wszystkich programow i make!
+3. Napisz pseudokod
