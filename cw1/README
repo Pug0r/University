@@ -31,10 +31,3 @@ identyfikatorami PID, PPID i PGID.
 stawa l si ,
 e liderem swojej w lasnej grupy proces´ow.
 ! Ile proces´ow powstanie przy n-krotnym wywo laniu funkcji fork i dlaczego?
-
-CWICZENIE 2: ´ Uruchamianie Programow: exec ´
-Zmodyfikowa´c program z ´cwiczenia 1b, tak aby komunikaty proces´ow potomnych by ly
-wypisywane przez program uruchamiany przez funkcj,
-e execlp. Nazw,
-e programu do uruchomienia przekazywa´c przez argumenty programu procesu macierzystego.
-! Ile proces´ow powstanie przy n-krotnym wywo laniu funkcji fork-exec jak wy˙zej i dlaczego?
