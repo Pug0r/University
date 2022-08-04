@@ -1,0 +1,11 @@
+// Cwiczenie drugie - wypisywanie komunikatow procesow potomnych za pomoca funkcji execlp.
+// Autor: Aleksander Pugowski
+// Data utworzenia: 23.03.2022
+// Program jest de facto kopia programu z cw1b, zmienione zostalo jedynie kilka linijek.
+// Zmiana dotyczy oczywiscie sposobu wypisywania komunikatow procesow potomnych:
+// uzycie do tego celu funkcji execlp zmienia ilosc wypisanych komunikatow, poniewaz wywolanie funkcji execlp
+// powoduje przerwanie wykonywania programu w ktorym zostala wywolana - jezeli excelp nie zwroci bledu, reszta programu sie nie wykona.
+// UWAGA: aby program zadzialal nalezy skompilowac WSZYSTKIE pliki w folderze - program bazuje na programie cw1a.x !!
+
+Po prawidlowym wywolaniu programu, w terminalu powinno wyswietlic sie identyfikatory 4 procesow: 1 macierzystego i 3 potomnych (wszystkie bedace bezposrednimi potomkami macierzystego). 
+Odpowiedz na pytanie o ilosc procesow podalem w osobnym pliku tekstowym.

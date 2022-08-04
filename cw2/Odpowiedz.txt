@@ -1,0 +1,5 @@
+Przy n-krotnym wywolaniu funkcji fork-exec (ZAKŁADAJĄC WYWOLANIE POPRAWNE!) powstanie n procesow (nie wliczam tu juz procesu macierzystego).
+Jest to spowodowane dzialaniem funkcji exec, ktora niejako 'nadpisuje' program w ktorym zostala wywolana - tj. uruchamia wskazany w niej program, bez
+konczenia tego, z ktorego zostala wywolana (chyba, ze zwroci blad - wtedy program kontynuuje).
+Tak wiec jedynie program macierzysty nie zostanie 'pominiety' i jedynie na niego bedzie dzialala funkcja fork, tak wiec powstanie tyle procesow
+ile razy wywolamy funkcje fork - gdyz kazde wywolanie, dzialajac tylko na jednym procesie, da nam tylko jeden proces.
