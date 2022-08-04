@@ -1,0 +1,1 @@
+Przy n-krotnym wywolaniu funkcji fork powstanie 2^n procesow, poniewaz z kazdym nastepnym wywolaniem kazdy istniejacy juz proces wywoluje ta funkcje, mamy wiec do czynienia ze wzrostem wykladniczym.
