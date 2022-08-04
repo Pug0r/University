@@ -4,3 +4,18 @@
 // znakow (buffer) za pomoca funkcji read, a nastepnie puszcza wczytany tekst w potok (funkcja write).
 // Natomiast proces macierzysty najpierw wczytuje informacje z potoku do swojej kopii buffera, a nastepnie wpisuje 
 // ją w plik wyjsciowy. Na koncu zarowno plik wejsciowy jak i plik wyjsciowy sa identyczne.
+
+
+CWICZENIE 4: ´ Producent–Konsument: Potoki Nienazwane
+Przy pomocy potok´ow nienazwanych systemu UNIX zaimplementowa´c problem ,,Producenta i konsumenta”. Dla zademonstrowania, ˙ze nie dosz lo do utraty ani zwielokrotnienia towaru, niech Producent pobiera ,,surowiec” (np. porcje bajt´ow) z pliku tekstowego
+i wstawia go jako towar do potoku, a Konsument niech umieszcza pobrany z potoku
+towar w innym pliku tekstowym (porcje danych Producenta i Konsumenta nie musz ,
+a by´c
+r´owne). Po zako´nczeniu dzia lania program´ow (wyczerpaniu zasob´ow ,,surowca”) oba pliki
+tekstowe powinny by´c identyczne (mo˙zna to sprawdzi´c poleceniem di↵ -s, kt´ore najlepiej
+umie´sci´c w pliku Makefile po poleceniu uruchomienia programu). Oba procesy niech
+drukuj ,
+a odpowiednie komunikaty na ekranie, w tym towar, kt´ory przesy laj ,
+a. Do zasymulowania r´o˙znych szybko´sci dzia lania program´ow u˙zy´c funkcji sleep, np. z losowym czasem
+usypiania. Do czytania/pisania danych z/do pliku tekstowego, jak r´ownie˙z wypisywania
+ich na ekran u˙zy´c funkcji read i write.
