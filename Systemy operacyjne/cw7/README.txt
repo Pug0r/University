@@ -64,3 +64,24 @@ Program tworzy pamiec dzielona i semafory, po czym tworzy (procesy potomne) i ur
 na zakonczenie pracy producenta i konsumenta i robi porzadki tj. usuwa utworzone semafory i obiekt pamieci dzielonej (przez zarejestrowana)
 funkcje atexit.
 
+
+CWICZENIE 7 ´ : Producent–Konsument: Pami ,
+ec Dzielona i Semafory ´
+Przy pomocy pami ,
+eci dzielonej oraz semafor´ow standardu POSIX zaimplementowa´c problem ,,producenta–konsumenta” z ´cwiczenia 4 przedstawiony poni˙zszym
+pseudokodem. Zamiast potoku u˙zy´c N-elementowego bufora cyklicznego (tzn. po doj´sciu
+do ko´nca bufora wracamy na jego pocz ,
+atek) umieszczonego w pami ,
+eci dzielonej, gdzie
+elementem bufora jest pewna ustalona porcja bajt´ow. Dost,
+ep do wsp´olnego bufora synchronizowa´c przy pomocy semafor´ow nazwanych standardu POSIX.
+Programy producenta i konsumenta uruchamia´c przez execlp w procesach potomnych
+utworzonych przez fork w procesie macierzystym – proces ten powinien wcze´sniej utworzy´c
+i zainicjowa´c semafory i pami ,
+e´c dzielon ,
+a, a po utworzeniu proces´ow potomnych zaczeka´c
+na ich zako´nczenie i zrobi´c odpowiednie porz ,
+adki. Podobnie jak w ´cwiczeniu 6, usuwanie
+obiektu pami ,
+eci dzielonej oraz semafor´ow umie´sci´c w funkcji rejestrowanej przez atexit
+oraz funkcji obslugi sygna lu SIGINT.
