@@ -9,3 +9,10 @@
 
 Po prawidlowym wywolaniu programu, w terminalu powinno wyswietlic sie identyfikatory 4 procesow: 1 macierzystego i 3 potomnych (wszystkie bedace bezposrednimi potomkami macierzystego). 
 Odpowiedz na pytanie o ilosc procesow podalem w osobnym pliku tekstowym.
+
+CWICZENIE 2: ´ Uruchamianie Programow: exec ´
+Zmodyfikowa´c program z ´cwiczenia 1b, tak aby komunikaty proces´ow potomnych by ly
+wypisywane przez program uruchamiany przez funkcj,
+e execlp. Nazw,
+e programu do uruchomienia przekazywa´c przez argumenty programu procesu macierzystego.
+! Ile proces´ow powstanie przy n-krotnym wywo laniu funkcji fork-exec jak wy˙zej i dlaczego?
