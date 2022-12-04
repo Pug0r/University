@@ -1,0 +1,24 @@
+PL
+(zadanie numeryczne NUM 6) Zadana jest macierz
+
+M =
+3 6 6 9
+1 4 0 9
+0 0.2 6 12
+0 0 0.1 6
+
+
+(a) Stosując algorytm QR znajdź wszystkie wartości własne macierzy M.
+(b) Stosując metodę potęgową znajdź największą co do modułu wartość własną macierzy B z zadania 9.
+oraz odpowiadający jej wektor własny.
+
+B =
+3 4 2 4
+4 7 1 −3
+2 1 3 2
+4 −3 2 2
+
+
+Wyniki sprawdź używając wybranego pakietu algebry komputerowej.
+
+autor zadania: Maciej Fidrysiak
