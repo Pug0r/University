@@ -1,0 +1,23 @@
+Zadana jest macierz
+
+A =
+
+10 8 1 1 . . . 1 1 1 1
+1 10 8 1 . . . 1 1 1 1
+1 1 10 8 . . . 1 1 1 1
+. . . . . . . . . . . .
+1 1 1 1 . . . 1 10 8 1
+1 1 1 1 . . . 1 1 10 8
+1 1 1 1 . . . 1 1 1 10
+
+oraz wektor b ≡ (5, . . . , 5)T . Macierz A ma liczby 10 na diagonali, 8 na pierwszej pozycji nad diagonalą,
+a pozostałe elementy są równe 1. Wymiar macierzy ustalamy na N = 50.
+
+• Rozwiąż numerycznie równanie Ay = b, dobierając odpowiedni algorytm. Uwaga: algorytm należy
+go zaimplementować samodzielnie (mile widziane jest jednak sprawdzenie wyniku przy użyciu
+procedur bibliotecznych lub pakietów algebry komputerowej).
+
+• Potraktuj N jako zmienną i zmierz czas potrzebny do uzyskania rozwiązania w funkcji N. Wynik
+przedstaw na wykresie. Czy wykres jest zgodny z oczekiwaniami?
+
+autor zadania: dr Maciej Fidrysiak
