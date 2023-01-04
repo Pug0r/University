@@ -1,0 +1,13 @@
+5. (Zadanie numeryczne NUM 7) Znajdź i wykreśl wielomiany interpolacyjne stopnia n, Wn(x), na
+przedziale x ∈ ⟨−1, 1⟩ dla funkcji y(x) = 1/(1+25x^2) dla
+(a) jednorodnych węzłów interpolacji, tj. xi = −1 + 2 i/(n+1) (i = 0, . . . , n),
+(b) xi = cos(((2i+1)*pi)/2(n+1)) (i = 0, . . . , n).
+
+Dla węzłów z pkt. (a) i (b) wybierz kilka wartości n i porównaj zachowanie się tych wielomianów dla
+dużego n (najlepiej w tym celu wykreślić Wn(x) dla różnych n na jednym wykresie). Zaproponuj również
+inne funkcje i znajdź dla nich wielomiany interpolacyjne dla węzłów zdefiniowanych w pkt. (a) i (b). Czy
+nasuwają się jakieś wnioski?
+UWAGA: Nie można korzystać z procedur bibliotecznych służących do interpolacji (chyba, że do sprawdzenia
+wyniku). Algorytm należy zaimplementować samodzielnie.
+
+autor zadania: dr Maciej Fidrysiak
