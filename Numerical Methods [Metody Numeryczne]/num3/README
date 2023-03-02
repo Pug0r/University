@@ -1,0 +1,11 @@
+(zadanie numeryczne NUM3) Wyznacz y = A−1x dla
+A = [...]
+Ustalamy N = 100. Oblicz również wyznacznik macierzy A. Zadanie rozwiąż
+właściwą metodą (uzasadnij wybór) i wykorzystaj strukturę macierzy (w przeciwnym wypadku zadanie
+nie będzie zaliczone). Algorytm proszę zaprogramować samodzielnie – wyjątkowo nie należy stosować
+procedur bibliotecznych z zakresu algebry liniowej ani pakietów algebry komputerowej (chyba, że do
+sprawdzenia swojego rozwiązania, co zawsze jest mile widziane).
+Dla ambitnych: potraktuj N jako zmienną i zmierz czas działania swojego programu w funkcji N. Wynik
+przedstaw na wykresie.
+
+autor: dr Maciej Fidrysiak
