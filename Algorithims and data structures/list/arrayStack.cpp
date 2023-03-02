@@ -3,8 +3,6 @@
 #define MAX_SIZE 100
 using namespace std;
 
-
-
 class ArrayStack{
 private:
 	const int max_size = MAX_SIZE;
@@ -38,19 +36,4 @@ public:
 };
 
 
-int main(){
-	cout << "Hello World" << endl;
-	ArrayStack a = ArrayStack();
-	a.push(2);
-	a.push(3);
-	a.push(4);
-	a.push(5);
-	a.print();
-	cout << a.pop() << endl; 
-	cout << a.pop() << endl; 
-	cout << a.pop() << endl; 
-	cout << a.pop() << endl; 
-	cout << a.pop() << endl; 
-
-	}
 
