@@ -1,10 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// autor: Aleksander Pugowski 19.12.2022
-// Funkcja umożliwiające printowanie drzewa nie jest mojego autorstwa
-
-
 struct Node{
 	int data;
 	Node *right;
@@ -178,65 +174,7 @@ int DELETE(int x){
 	};
 
 
-// IT IS NOT MY FUNCTION, I found it on the internet, on some old forum, it visualisies the tree quite nicely - easier to test 
-void printBT(const std::string& prefix, const Node* node, bool isLeft)
-{
-    if( node != nullptr )
-    {
-        std::cout << prefix;
-
-        std::cout << (isLeft ? "├──" : "└──" );
-
-        std::cout << node->data<< std::endl;
-
-        printBT( prefix + (isLeft ? "│   " : "    "), node->left, true);
-        printBT( prefix + (isLeft ? "│   " : "    "), node->right, false);
-    }
-}
-
-void printBT(const Node* node)
-{
-    printBT("", node, false);    
-}
 
 
-
-int main(){
-	cout << "Hello World" << endl;
-	binarySearchTree a = binarySearchTree();
-	cout << "INSERT" << endl;
-	a.insert(50);
-	a.insert(25);
-	a.insert(76);
-	a.insert(12);
-	a.insert(30);
-	a.insert(60);
-	a.insert(85);
-	a.insert(52);
-	a.insert(70);
-	printBT(a.getRoot());
-	cout << "SEARCH" << endl;
-	cout << a.search(52);
-	cout << a.search(50);
-	cout << a.search(25);
-	cout << a.search(0);
-	cout << a.search(-100);
-	cout << a.search(1929);
-	cout << a.search(200) << endl;
-	cout << "DELETE LEAF - 52 and 12" << endl;
-	a.DELETE(12);
-	a.DELETE(52);
-	printBT(a.getRoot());
-	cout << "DELETE WHEN ONE CHILD - 60" << endl;
-	a.DELETE(60);
-	printBT(a.getRoot());
-	cout << "DELETE WHEN TWO CHILDREN - 76" << endl;
-	a.DELETE(76);
-	printBT(a.getRoot());
-	cout << "DELETE ROOT- 50" << endl;
-	a.DELETE(50);
-	printBT(a.getRoot());
-
-	}
 
 
