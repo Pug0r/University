@@ -2,7 +2,6 @@
 #define FAIL_VALUE -997
 using namespace std;
 
-
 struct Node{
 	int data;
 	Node *next;
@@ -48,30 +47,3 @@ public:
     }
 };
 
-
-int main(){
-	cout << "Hello World" << endl;
-	pointerQueue a = pointerQueue();
-	a.push(1);
-	a.push(2);
-	a.push(3);
-	a.push(4);
-	a.show();
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << "---------------" << endl;
-	a.push(6);
-	a.push(6);
-	a.push(6);
-	a.push(6);
-	a.push(6);
-	a.show();
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	}
