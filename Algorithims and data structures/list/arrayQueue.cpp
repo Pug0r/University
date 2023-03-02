@@ -3,8 +3,6 @@
 #define MAX_SIZE 5
 using namespace std;
 
-
-
 class ArrayQueue{
 private:
 	const int max_size = MAX_SIZE;
@@ -59,37 +57,3 @@ public:
 };
 
 
-
-int main(){
-	cout << "Hello World" << endl;
-	ArrayQueue a = ArrayQueue();
-	a.enqueue(1);
-	a.enqueue(2);
-	a.enqueue(3);
-	a.enqueue(4);
-	a.enqueue(5);
-	a.print();
-	a.dequeue();
-	a.dequeue();
-	a.dequeue();
-	a.print();
-	a.enqueue(7);
-	a.enqueue(9);
-	a.enqueue(10);
-	a.print();
-	a.dequeue();
-	a.dequeue();
-	a.dequeue();
-	a.print();
-	a.enqueue(1);
-	a.enqueue(2);
-	a.enqueue(3);
-	a.enqueue(4);
-	a.enqueue(5);
-	a.print();
-	// dziala elegancko wszystko
-	// TODO: posprzataj kod, usun komentarze
-	// cout << a.dequeue() << endl;
-	// cout << a.dequeue() << endl;
-	// a.print();
-	}
