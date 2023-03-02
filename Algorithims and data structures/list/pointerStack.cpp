@@ -42,29 +42,3 @@ public:
     }
 };
 
-
-int main(){
-	cout << "Hello World" << endl;
-	pointerStack a = pointerStack();
-	a.push(1);
-	a.push(2);
-	a.push(3);
-	a.push(4);
-	a.show();
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	a.push(6);
-	a.push(6);
-	a.push(6);
-	a.push(6);
-	a.push(6);
-	a.show();
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	cout << a.pop() << endl;
-	}
