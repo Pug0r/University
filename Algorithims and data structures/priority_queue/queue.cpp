@@ -1,7 +1,6 @@
 #include "queue.h"
 #include <array>
 #include <iostream>
-#include <cmath>
 
 using namespace std;
 
