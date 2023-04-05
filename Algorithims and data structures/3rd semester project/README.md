@@ -2,5 +2,5 @@ The goal of the project was to create a T9-dictionary using some tree-like struc
 Made with Tkinter, the underlying data structure is Trie-like.
 
 
-![ups:](graphics/phone.png?raw=true)  |  ![ups:](graphics/working_phone.png?raw=true)
+<p align="center"> ![ups:](graphics/phone.png?raw=true)  |  ![ups:](graphics/working_phone.png?raw=true) </p>
 
